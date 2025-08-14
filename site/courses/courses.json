@@ -1,0 +1,20 @@
+[
+    {
+        "id": "ai_agent_bootcamp",
+        "name": "AI Agent CEO Bootcamp",
+        "description": "An 11-day intensive program to master AI agents from fundamentals to deployment.",
+        "path": "courses/ai_agent_bootcamp/content.json"
+    },
+    {
+        "id": "cloud_architecture_mastery",
+        "name": "Cloud Architecture Mastery",
+        "description": "Learn to design, deploy, and manage scalable cloud infrastructures.",
+        "path": "courses/cloud_architecture_mastery/content.json"
+    },
+    {
+        "id": "ai_ethics_and_legal",
+        "name": "AI Ethics, Law & Economic Impact Course",
+        "description": "An intensive program covering AI foundations, ethics, laws, economic impact, industry application, and career pathways.",
+        "path": "courses/ai_ethics_and_legal/content.json"
+    }
+]

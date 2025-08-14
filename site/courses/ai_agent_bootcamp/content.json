@@ -1,0 +1,502 @@
+{
+    "course_id": "ai_agent_bootcamp",
+    "course_name": "AI Agent CEO Bootcamp",
+    "duration_days": 11,
+    "schedule": [
+        {
+            "day": 1,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Agent Fundamentals (types, architecture, autonomy levels)"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Key components (LLM, tools, memory, orchestration)"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Prompt engineering essentials"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Setting up local environment"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Building first agent – single tool (API fetcher)"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Continuing agent build – integrating with LLM"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Adding simple memory"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Error handling basics"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Deploying locally"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Multi-agent communication models"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Role-based agents (planner, executor, reviewer)"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Coordination patterns (sequential, parallel, hub-and-spoke)"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Handling shared state without conflicts"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Implementing planner–executor–reviewer system (Part 1)"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Implementing planner–executor–reviewer system (Part 2)"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Testing inter-agent trust and verification"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Debugging multi-agent workflows"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Performance considerations in multi-agent workflows"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Adding APIs & SDKs"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Working with databases"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Integrating external LLMs and embeddings"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Handling file uploads/downloads"
+                },
+                {
+                    "hour": 5,
+                    "topic": "SOAP/legacy API handling"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Search & RAG pipeline integration"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Combining multiple data sources"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Testing integrations"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Error recovery patterns"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 4,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Memory types (short-term, long-term, episodic, semantic)"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Vector stores & embeddings"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Indexed search for agents"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Incremental updates without retraining"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Implementing hybrid memory (short + long-term) – Part 1"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Implementing hybrid memory – Part 2"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Forgetting & pruning strategies"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Knowledge aging and versioning"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Testing recall accuracy"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 5,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Planning algorithms for agents"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Self-reflection loops"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Error analysis automation"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Skill learning via API exploration"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Implementing autonomous task re-prioritization – Part 1"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Implementing autonomous task re-prioritization – Part 2"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Balancing autonomy with human oversight"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Detecting goal drift"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Sandbox testing for safe learning"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 6,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Output filtering & red teaming"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Prompt injection defense"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Role-based access control for agents"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Authentication & signed agent messages"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Supply chain security (dependencies)"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Monitoring for malicious behavior"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Fail-safe shutdown mechanisms"
+                },
+                {
+                    "hour": 8,
+                    "topic": "User privacy & compliance (GDPR, HIPAA)"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Incident response playbooks"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 7,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Evaluation metrics (BLEU, ROUGE, task-specific)"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Success/failure tracking"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Latency and throughput testing"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Regression testing pipelines"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Automated evaluation agents – Part 1"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Automated evaluation agents – Part 2"
+                },
+                {
+                    "hour": 7,
+                    "topic": "A/B testing agents"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Data-driven optimization"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Performance dashboards"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 8,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Horizontal scaling strategies"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Multi-region deployments"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Cost forecasting models"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Load balancing for LLM calls"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Distributed memory architectures – Part 1"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Distributed memory architectures – Part 2"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Error rate thresholds & auto-recovery"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Monitoring and alerting setup"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Disaster recovery drills"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 9,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Market analysis"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Problem–solution fit validation"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Pricing strategies"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Subscription vs. transaction models"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Cost vs. revenue modeling – Part 1"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Cost vs. revenue modeling – Part 2"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Marketing channels for agent products"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Case studies of successful agent businesses"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Preparing investor pitch decks"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 10,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Bias detection techniques"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Explainable AI (XAI) for agents"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Cultural & linguistic sensitivity"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Accessibility compliance"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Ethics playbook creation – Part 1"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Ethics playbook creation – Part 2"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Community feedback loops"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Transparency reporting"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Balancing profit and responsibility"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Review + checkpoint quiz"
+                }
+            ]
+        },
+        {
+            "day": 11,
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Final project planning & scope definition"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Building final project – Phase 1"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Building final project – Phase 2"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Building final project – Phase 3"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Code review & evaluation – Part 1"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Code review & evaluation – Part 2"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Load testing & security validation – Part 1"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Load testing & security validation – Part 2"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Business pitch preparation & delivery"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Graduation & certification"
+                }
+            ]
+        }
+    ]
+}
