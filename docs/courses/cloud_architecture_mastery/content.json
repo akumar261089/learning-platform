@@ -1,0 +1,514 @@
+{
+    "course_id": "cloud_architecture_mastery",
+    "course_name": "Cloud Architecture Mastery",
+    "description": "A comprehensive day-by-day and hour-by-hour program to master cloud architecture, covering fundamentals to advanced real-world deployment scenarios.",
+    "duration_days": 11,
+    "schedule": [
+        {
+            "day": 1,
+            "title": "Foundations of Cloud Architecture",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Course Introduction & Goals"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Cloud Computing Basics"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Types of Cloud Services (IaaS, PaaS, SaaS)"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Cloud Deployment Models (Public, Private, Hybrid, Multi-Cloud)"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Core Architectural Principles"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Shared Responsibility Model"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Cloud Service Providers Overview (AWS, Azure, GCP)"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Region & Availability Zones"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Hands-on: Setting up Free Tier Accounts"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 2,
+            "title": "Networking & Storage in Cloud",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Cloud Networking Fundamentals"
+                },
+                {
+                    "hour": 2,
+                    "topic": "VPC, Subnets, and IP Addressing"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Routing & Gateways"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Load Balancers & DNS Services"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Firewalls & Security Groups"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Cloud Storage Types (Object, Block, File)"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Data Lifecycle & Archiving"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Hands-on: Configuring a VPC"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Hands-on: Deploying a Load Balanced App"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 3,
+            "title": "Compute Services & Scalability",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Compute Options in Cloud"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Virtual Machines & Instance Types"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Serverless Computing"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Containers & Orchestration (Kubernetes, ECS, AKS, GKE)"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Auto Scaling Strategies"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Spot, Reserved, and On-Demand Instances"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: Deploying a VM"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Hands-on: Scaling Web App"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Cost Optimization in Compute"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 4,
+            "title": "Databases in the Cloud",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Cloud Database Options"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Relational Databases"
+                },
+                {
+                    "hour": 3,
+                    "topic": "NoSQL Databases"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Data Warehousing & Analytics"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Backup & Recovery"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Replication & High Availability"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: Deploying RDS"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Hands-on: Query Optimization"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Data Migration Tools"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 5,
+            "title": "Security & Compliance",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Cloud Security Principles"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Identity & Access Management"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Encryption in Transit & at Rest"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Key Management Services"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Security Monitoring & Logging"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Compliance Standards (ISO, GDPR, HIPAA)"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: IAM Policy Creation"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Security Best Practices"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Incident Response Planning"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 6,
+            "title": "High Availability & Disaster Recovery",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "HA vs DR Concepts"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Multi-Region Architecture"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Failover Strategies"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Backup Automation"
+                },
+                {
+                    "hour": 5,
+                    "topic": "DR Drills"
+                },
+                {
+                    "hour": 6,
+                    "topic": "RTO & RPO"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: Cross-Region Replication"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Hands-on: Load Balancing Across Regions"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Case Studies"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 7,
+            "title": "Multi-Cloud & Hybrid Strategies",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Why Multi-Cloud?"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Hybrid Cloud Integrations"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Vendor Lock-in Avoidance"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Interoperability & Networking"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Data Portability"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Security in Multi-Cloud"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: Deploying Across AWS & Azure"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Cost Management Across Clouds"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Multi-Cloud Monitoring Tools"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 8,
+            "title": "DevOps & Automation in Cloud",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Infrastructure as Code (IaC) Overview"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Terraform & CloudFormation"
+                },
+                {
+                    "hour": 3,
+                    "topic": "CI/CD Pipelines in Cloud"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Configuration Management"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Automating Deployments"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Monitoring Deployments"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: Terraform Script for Web App"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Hands-on: CI/CD Pipeline"
+                },
+                {
+                    "hour": 9,
+                    "topic": "GitOps"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 9,
+            "title": "Observability & Performance Optimization",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Cloud Monitoring Tools"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Logging & Tracing"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Metrics & Dashboards"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Application Performance Monitoring"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Cost Monitoring"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Alerting Strategies"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: Setting Up CloudWatch/Grafana"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Hands-on: Analyzing Logs"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Performance Tuning"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 10,
+            "title": "AI, ML & Emerging Tech in Cloud",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "AI/ML Services in Cloud"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Data Pipeline Architectures"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Edge Computing"
+                },
+                {
+                    "hour": 4,
+                    "topic": "IoT Architectures"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Serverless AI"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Hands-on: Deploy ML Model in Cloud"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Hands-on: IoT Data Processing"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Ethics & Governance in AI"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Future Trends in Cloud"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Q&A and Recap"
+                }
+            ]
+        },
+        {
+            "day": 11,
+            "title": "Final Project & Certification",
+            "topics": [
+                {
+                    "hour": 1,
+                    "topic": "Project Briefing"
+                },
+                {
+                    "hour": 2,
+                    "topic": "Architecture Planning"
+                },
+                {
+                    "hour": 3,
+                    "topic": "Building the Project"
+                },
+                {
+                    "hour": 4,
+                    "topic": "Implementation"
+                },
+                {
+                    "hour": 5,
+                    "topic": "Testing & Validation"
+                },
+                {
+                    "hour": 6,
+                    "topic": "Security Review"
+                },
+                {
+                    "hour": 7,
+                    "topic": "Performance Review"
+                },
+                {
+                    "hour": 8,
+                    "topic": "Cost Optimization Review"
+                },
+                {
+                    "hour": 9,
+                    "topic": "Final Presentation"
+                },
+                {
+                    "hour": 10,
+                    "topic": "Certification & Closing Remarks"
+                }
+            ]
+        }
+    ]
+}
