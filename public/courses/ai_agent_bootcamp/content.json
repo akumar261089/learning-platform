@@ -1,0 +1,52 @@
+{
+  "course_id": "ai_agent_bootcamp",
+  "course_name": "AI Agent CEO Bootcamp",
+  "description": "An 11-day intensive program to master AI agents from fundamentals to deployment.",
+  "duration_days": 11,
+  "schedule": [
+    {
+      "day": 1,
+      "title": "Introduction to AI Agents",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "What are AI Agents?"
+        },
+        {
+          "hour": 2,
+          "topic": "Types of AI Agents"
+        },
+        {
+          "hour": 3,
+          "topic": "Agent Architecture Fundamentals"
+        },
+        {
+          "hour": 4,
+          "topic": "Real-world Agent Examples"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Agent Design Patterns",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Single-Purpose Agents"
+        },
+        {
+          "hour": 2,
+          "topic": "Multi-Agent Systems"
+        },
+        {
+          "hour": 3,
+          "topic": "Agent Communication Protocols"
+        },
+        {
+          "hour": 4,
+          "topic": "Hands-on: Building Your First Agent"
+        }
+      ]
+    }
+  ]
+}

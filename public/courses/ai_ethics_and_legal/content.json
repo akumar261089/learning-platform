@@ -1,0 +1,190 @@
+{
+  "course_id": "ai_ethics_and_legal",
+  "course_name": "AI Ethics, Law & Economic Impact Course",
+  "description": "An intensive program covering AI foundations, ethics, laws, economic impact, industry application, and career pathways.",
+  "duration_days": 42,
+  "schedule": [
+    {
+      "day": 1,
+      "title": "What is AI? Narrow vs General AI, Generative AI",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Theory: What is AI?"
+        },
+        {
+          "hour": 2,
+          "topic": "Case Study on Narrow vs General AI"
+        },
+        {
+          "hour": 3,
+          "topic": "Law/Ethical Context: Responsible AI"
+        },
+        {
+          "hour": 4,
+          "topic": "Hands-On AI Demonstration"
+        },
+        {
+          "hour": 5,
+          "topic": "Assigned Reading: Definitions of AI"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Refresher: Micro & Macro Economics for AI Impact",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Theory: Micro Economics Refresher"
+        },
+        {
+          "hour": 2,
+          "topic": "Theory: Macro Economics Refresher"
+        },
+        {
+          "hour": 3,
+          "topic": "Case Study: AI's Economic Positioning"
+        },
+        {
+          "hour": 4,
+          "topic": "Hands-On AI Market Analysis"
+        },
+        {
+          "hour": 5,
+          "topic": "Assignment: AI and Economic Models"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "AI Technologies Landscape (ML, NLP, CV, Robotics)",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Theory: Introduction to ML/NLP/CV/Robotics"
+        },
+        {
+          "hour": 2,
+          "topic": "Real-World Examples of AI Technologies"
+        },
+        {
+          "hour": 3,
+          "topic": "Exploration of AI Tools"
+        },
+        {
+          "hour": 4,
+          "topic": "Hands-On Experimentation: AI Models"
+        },
+        {
+          "hour": 5,
+          "topic": "Reflection Activity: Tool Strength Assessment"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "AI's Role in the Knowledge Economy",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Theory: Concepts of Knowledge Economy with AI"
+        },
+        {
+          "hour": 2,
+          "topic": "Global Trends: AI in Knowledge Industries"
+        },
+        {
+          "hour": 3,
+          "topic": "Hands-On: Data Search in Knowledge Economy"
+        },
+        {
+          "hour": 4,
+          "topic": "Assignment: Report on AI Adoption"
+        },
+        {
+          "hour": 5,
+          "topic": "Discussion: Case Study on Knowledge Work"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "AI as a Factor of Production (Comparing with Labor/Capital)",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Theory: AI's Role in Production Models"
+        },
+        {
+          "hour": 2,
+          "topic": "Economic Modeling: AI vs. Traditional Inputs (Labor/Capital)"
+        },
+        {
+          "hour": 3,
+          "topic": "Data Analysis: AI Productivity Frameworks"
+        },
+        {
+          "hour": 4,
+          "topic": "Hands-On: Building Basic AI Models"
+        },
+        {
+          "hour": 5,
+          "topic": "Reflection Activity: Benefits of AI as a Factor"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "title": "AI Adoption Curve & Diffusion in Markets",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Theory: Diffusion of Innovations Framework"
+        },
+        {
+          "hour": 2,
+          "topic": "Case Study: AI Market Adoption Pathways"
+        },
+        {
+          "hour": 3,
+          "topic": "Market Adoption Report Exploration"
+        },
+        {
+          "hour": 4,
+          "topic": "Group Activity: Analyzing Adoption Scenarios"
+        },
+        {
+          "hour": 5,
+          "topic": "Reflection: Key Barriers to Adoption"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "title": "Weekly Review & Quiz",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Review: Key Topics of Week 1"
+        },
+        {
+          "hour": 2,
+          "topic": "Quiz: AI Basics and Market Economics"
+        },
+        {
+          "hour": 3,
+          "topic": "Group Discussion: Application of Week 1 Learnings"
+        },
+        {
+          "hour": 4,
+          "topic": "Case Work: Real-World AI Implementation"
+        },
+        {
+          "hour": 5,
+          "topic": "Assignments Kickoff: Week 2 Preparations"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "course_id": "cloud_architecture_mastery",
+  "course_name": "Cloud Architecture Mastery",
+  "description": "Learn to design, deploy, and manage scalable cloud infrastructures.",
+  "duration_days": 30,
+  "schedule": [
+    {
+      "day": 1,
+      "title": "Cloud Fundamentals",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Introduction to Cloud Computing"
+        },
+        {
+          "hour": 2,
+          "topic": "IaaS, PaaS, SaaS Overview"
+        },
+        {
+          "hour": 3,
+          "topic": "Major Cloud Providers Comparison"
+        },
+        {
+          "hour": 4,
+          "topic": "Cloud Architecture Principles"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Scalability and High Availability",
+      "topics": [
+        {
+          "hour": 1,
+          "topic": "Auto Scaling Strategies"
+        },
+        {
+          "hour": 2,
+          "topic": "Load Balancing Techniques"
+        },
+        {
+          "hour": 3,
+          "topic": "Multi-Region Deployments"
+        },
+        {
+          "hour": 4,
+          "topic": "Disaster Recovery Planning"
+        }
+      ]
+    }
+  ]
+}
