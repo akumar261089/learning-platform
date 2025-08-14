@@ -1,12 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Send, Loader2, CheckCircle, Circle, MessageSquare, Brain, BookOpen, Lightbulb, Star } from 'lucide-react';
-import { llmService } from '../services/llm';
-import { storageService } from '../services/storage';
-import { TopicProgress } from '../types';
-import { StudyTimer } from './StudyTimer';
+import React, { useState, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import {
+  ArrowLeft,
+  Send,
+  Loader2,
+  CheckCircle,
+  Circle,
+  MessageSquare,
+  Brain,
+  BookOpen,
+  Lightbulb,
+  Star,
+} from "lucide-react";
+import { llmService } from "../services/llm";
+import { storageService } from "../services/storage";
+import { TopicProgress } from "../types";
+import { StudyTimer } from "./StudyTimer";
 
 interface TopicDetailProps {
   courseId: string;
+  courseContent: any; // Adjust type as needed based on your course content structure
   day: number;
   hour: number;
   topic: string;
@@ -15,33 +28,42 @@ interface TopicDetailProps {
 
 export const TopicDetail: React.FC<TopicDetailProps> = ({
   courseId,
+  courseContent,
   day,
   hour,
   topic,
-  onBack
+  onBack,
 }) => {
-  const [prompt, setPrompt] = useState('');
-  const [response, setResponse] = useState('');
+  const [prompt, setPrompt] = useState("");
+  const [response, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [progress, setProgress] = useState<TopicProgress | null>(null);
-  const [studyNotes, setStudyNotes] = useState('');
-  const [keyTakeaways, setKeyTakeaways] = useState<string[]>(['']);
-  const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
+  const [studyNotes, setStudyNotes] = useState("");
+  const [keyTakeaways, setKeyTakeaways] = useState<string[]>([""]);
+  const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">(
+    "medium"
+  );
   const [showStudyTools, setShowStudyTools] = useState(false);
 
   useEffect(() => {
-    const existingProgress = storageService.getTopicProgress(courseId, day, hour);
+    const existingProgress = storageService.getTopicProgress(
+      courseId,
+      day,
+      hour
+    );
     if (existingProgress) {
       setProgress(existingProgress);
-      setPrompt(existingProgress.prompt || '');
-      setResponse(existingProgress.response || '');
-      setStudyNotes(existingProgress.studyNotes || '');
-      setKeyTakeaways(existingProgress.keyTakeaways || ['']);
-      setDifficulty(existingProgress.difficulty || 'medium');
+      setPrompt(existingProgress.prompt || "");
+      setResponse(existingProgress.response || "");
+      setStudyNotes(existingProgress.studyNotes || "");
+      setKeyTakeaways(existingProgress.keyTakeaways || [""]);
+      setDifficulty(existingProgress.difficulty || "medium");
     } else {
       // Set a default prompt based on the topic
-      const defaultPrompt = `Explain "${topic}" in detail. Provide practical examples and key concepts that would be useful for learning.`;
+      const defaultPrompt = `Provide practical examples and key concepts that would be useful for learning. Explain "${topic}" in detail which is part of "${JSON.stringify(
+        courseContent
+      )}". `;
       setPrompt(defaultPrompt);
     }
   }, [courseId, day, hour]);
@@ -55,28 +77,32 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
 
     try {
       const result = await llmService.generateResponse(prompt);
-      
+
       if (result.error) {
         setError(result.error);
       } else {
         setResponse(result.response);
-        
+
         // Save to localStorage
         storageService.updateTopicProgress(courseId, day, hour, {
           prompt: prompt.trim(),
           response: result.response,
           completed: progress?.completed || false,
           studyNotes,
-          keyTakeaways: keyTakeaways.filter(t => t.trim()),
-          difficulty
+          keyTakeaways: keyTakeaways.filter((t) => t.trim()),
+          difficulty,
         });
-        
+
         // Update local state
-        const updatedProgress = storageService.getTopicProgress(courseId, day, hour);
+        const updatedProgress = storageService.getTopicProgress(
+          courseId,
+          day,
+          hour
+        );
         setProgress(updatedProgress || null);
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
       setLoading(false);
     }
@@ -89,12 +115,16 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
       prompt: prompt.trim(),
       response,
       studyNotes,
-      keyTakeaways: keyTakeaways.filter(t => t.trim()),
+      keyTakeaways: keyTakeaways.filter((t) => t.trim()),
       difficulty,
-      masteryLevel: isCompleted ? 100 : progress?.masteryLevel || 0
+      masteryLevel: isCompleted ? 100 : progress?.masteryLevel || 0,
     });
-    
-    const updatedProgress = storageService.getTopicProgress(courseId, day, hour);
+
+    const updatedProgress = storageService.getTopicProgress(
+      courseId,
+      day,
+      hour
+    );
     setProgress(updatedProgress || null);
   };
 
@@ -102,9 +132,9 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
     setStudyNotes(notes);
     storageService.updateTopicProgress(courseId, day, hour, {
       studyNotes: notes,
-      keyTakeaways: keyTakeaways.filter(t => t.trim()),
+      keyTakeaways: keyTakeaways.filter((t) => t.trim()),
       difficulty,
-      completed: progress?.completed || false
+      completed: progress?.completed || false,
     });
   };
 
@@ -112,32 +142,36 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
     const newTakeaways = [...keyTakeaways];
     newTakeaways[index] = value;
     setKeyTakeaways(newTakeaways);
-    
+
     storageService.updateTopicProgress(courseId, day, hour, {
       studyNotes,
-      keyTakeaways: newTakeaways.filter(t => t.trim()),
+      keyTakeaways: newTakeaways.filter((t) => t.trim()),
       difficulty,
-      completed: progress?.completed || false
+      completed: progress?.completed || false,
     });
   };
 
   const addTakeaway = () => {
-    setKeyTakeaways([...keyTakeaways, '']);
+    setKeyTakeaways([...keyTakeaways, ""]);
   };
 
   const removeTakeaway = (index: number) => {
     const newTakeaways = keyTakeaways.filter((_, i) => i !== index);
-    setKeyTakeaways(newTakeaways.length > 0 ? newTakeaways : ['']);
+    setKeyTakeaways(newTakeaways.length > 0 ? newTakeaways : [""]);
   };
 
   const handleSessionComplete = (focusTime: number) => {
     storageService.updateTopicProgress(courseId, day, hour, {
       timeSpent: (progress?.timeSpent || 0) + focusTime,
       lastReviewed: Date.now(),
-      reviewCount: (progress?.reviewCount || 0) + 1
+      reviewCount: (progress?.reviewCount || 0) + 1,
     });
-    
-    const updatedProgress = storageService.getTopicProgress(courseId, day, hour);
+
+    const updatedProgress = storageService.getTopicProgress(
+      courseId,
+      day,
+      hour
+    );
     setProgress(updatedProgress || null);
   };
 
@@ -153,12 +187,14 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Course
         </button>
-        
+
         <div className="bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h1 className="text-2xl font-bold text-gray-900 mb-1">{topic}</h1>
-              <p className="text-gray-600">Day {day}, Hour {hour}</p>
+              <p className="text-gray-600">
+                Day {day}, Hour {hour}
+              </p>
               {progress?.timeSpent && (
                 <p className="text-sm text-blue-600">
                   Study time: {Math.round(progress.timeSpent / 60)} minutes
@@ -177,8 +213,8 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
                 onClick={toggleComplete}
                 className={`inline-flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                   progress?.completed
-                    ? 'bg-green-100 text-green-700 hover:bg-green-200'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? "bg-green-100 text-green-700 hover:bg-green-200"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
                 {progress?.completed ? (
@@ -186,11 +222,11 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
                 ) : (
                   <Circle className="h-5 w-5 mr-2" />
                 )}
-                {progress?.completed ? 'Completed' : 'Mark Complete'}
+                {progress?.completed ? "Completed" : "Mark Complete"}
               </button>
             </div>
           </div>
-          
+
           {progress?.timestamp && (
             <div className="text-sm text-gray-500 mb-4">
               Last updated: {new Date(progress.timestamp).toLocaleString()}
@@ -215,9 +251,11 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
         <div className="xl:col-span-2 bg-white rounded-lg shadow-md p-6">
           <div className="flex items-center mb-4">
             <MessageSquare className="h-5 w-5 text-blue-600 mr-2" />
-            <h2 className="text-lg font-semibold text-gray-900">Your Question</h2>
+            <h2 className="text-lg font-semibold text-gray-900">
+              Your Question
+            </h2>
           </div>
-          
+
           <form onSubmit={handleSubmit}>
             <textarea
               value={prompt}
@@ -227,10 +265,11 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
               placeholder="Ask a question about this topic..."
               disabled={loading}
             />
-            
+
             <div className="flex items-center justify-between mt-4">
               <div className="text-sm text-gray-500">
-                Using {llmSettings.provider} ({llmSettings.model || 'default model'})
+                Using {llmSettings.provider} (
+                {llmSettings.model || "default model"})
               </div>
               <button
                 type="submit"
@@ -242,7 +281,7 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
                 ) : (
                   <Send className="h-4 w-4 mr-2" />
                 )}
-                {loading ? 'Generating...' : 'Ask AI'}
+                {loading ? "Generating..." : "Ask AI"}
               </button>
             </div>
           </form>
@@ -251,19 +290,21 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
           <div className="mt-6 pt-6 border-t border-gray-200">
             <div className="flex items-center mb-4">
               <Brain className="h-5 w-5 text-green-600 mr-2" />
-              <h3 className="text-lg font-semibold text-gray-900">AI Response</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                AI Response
+              </h3>
             </div>
-            
+
             {error && (
               <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
                 <p className="text-red-700 text-sm">{error}</p>
               </div>
             )}
-            
+
             {response ? (
               <div className="prose prose-sm max-w-none">
                 <div className="bg-gray-50 rounded-lg p-4 whitespace-pre-wrap text-gray-800 text-sm leading-relaxed">
-                  {response}
+                  <ReactMarkdown>{response}</ReactMarkdown>
                 </div>
               </div>
             ) : (
@@ -281,7 +322,9 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex items-center mb-4">
               <BookOpen className="h-5 w-5 text-purple-600 mr-2" />
-              <h3 className="text-lg font-semibold text-gray-900">Study Notes</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Study Notes
+              </h3>
             </div>
             <textarea
               value={studyNotes}
@@ -297,7 +340,9 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center">
                 <Lightbulb className="h-5 w-5 text-yellow-600 mr-2" />
-                <h3 className="text-lg font-semibold text-gray-900">Key Takeaways</h3>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Key Takeaways
+                </h3>
               </div>
               <button
                 onClick={addTakeaway}
@@ -312,7 +357,9 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
                   <input
                     type="text"
                     value={takeaway}
-                    onChange={(e) => handleTakeawayChange(index, e.target.value)}
+                    onChange={(e) =>
+                      handleTakeawayChange(index, e.target.value)
+                    }
                     className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-sm"
                     placeholder="Key takeaway..."
                   />
@@ -333,21 +380,23 @@ export const TopicDetail: React.FC<TopicDetailProps> = ({
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex items-center mb-4">
               <Star className="h-5 w-5 text-orange-600 mr-2" />
-              <h3 className="text-lg font-semibold text-gray-900">Difficulty</h3>
+              <h3 className="text-lg font-semibold text-gray-900">
+                Difficulty
+              </h3>
             </div>
             <div className="flex space-x-2">
-              {(['easy', 'medium', 'hard'] as const).map((level) => (
+              {(["easy", "medium", "hard"] as const).map((level) => (
                 <button
                   key={level}
                   onClick={() => setDifficulty(level)}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
                     difficulty === level
-                      ? level === 'easy'
-                        ? 'bg-green-100 text-green-700'
-                        : level === 'medium'
-                        ? 'bg-yellow-100 text-yellow-700'
-                        : 'bg-red-100 text-red-700'
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                      ? level === "easy"
+                        ? "bg-green-100 text-green-700"
+                        : level === "medium"
+                        ? "bg-yellow-100 text-yellow-700"
+                        : "bg-red-100 text-red-700"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
                 >
                   {level.charAt(0).toUpperCase() + level.slice(1)}
